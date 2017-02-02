@@ -37,7 +37,7 @@ class ChartsServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/charts.php', 'charts');
 
-        $this->app->register(HtmlServiceProvider::class);
+        //$this->app->register(HtmlServiceProvider::class);
 
         $this->app->singleton(Builder::class, function ($app) {
             return new Builder();
