@@ -17,9 +17,9 @@
                     label: "{{ $model->datasets[$i]['label'] }}",
                     lineTension: 0.3,
                     @if($model->colors and count($model->colors) > $i)
-                        @php($c = $model->colors[$i])
+                        <?php $c = $model->colors[$i] ?>
                     @else
-                        @php($c = sprintf('#%06X', mt_rand(0, 0xFFFFFF)))
+                        <?php $c = sprintf('#%06X', mt_rand(0, 0xFFFFFF)) ?>
                     @endif
                     borderColor: "{{ $c }}",
                     backgroundColor: "{{ $c }}",
